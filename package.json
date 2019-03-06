@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,14 @@
   },
   "homepage": "https://github.com/melodychai/socialkeep#readme",
   "dependencies": {
+    "aws-sdk": "^2.415.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "multer": "^1.4.1",
+    "path": "^0.12.7",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "webpack": "^4.29.6"
