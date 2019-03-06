@@ -21,11 +21,7 @@ class App extends Component {
     Object.keys(body).map(key => {
       formBody.append(key, body[key]);
     });
-    for (var key of formBody.entries()) {
-			console.log("formbody", key[0] + ', ' + key[1])
-		}
-    console.log(formBody, body);
-
+   
     fetch('/api/addPhoto',{
       method:'POST',
       body: formBody
