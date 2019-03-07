@@ -15,7 +15,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-rows: 30px 10px 1fr 10px 20px;
-  grid-template-columns: 3fr 5fr 3fr;
+  grid-template-columns: 3fr minmax(400px, 450px) 3fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px; 
   justify-content: center;
@@ -49,7 +49,7 @@ body {
   height: auto;
   border: black;
   box-shadow: 0 0 10px gray;
-  justify-items: center;
+  padding: 50px;  
 
 }
 
@@ -58,6 +58,10 @@ body {
 }
 
 .SubmissionComponents {
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  box-align: center;
 }
 
 .navigationComponent {
@@ -140,11 +144,10 @@ input {
   box-shadow: $input-fields-box-shadow;
   border-radius: $border-radius;
   height: 50px;
+  padding-left: 10px;
 }
 
-#inputContactDetails {
-  width: 350px
-}
+
 
 //** --------- Buttons ------------------
 
