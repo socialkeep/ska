@@ -19,7 +19,13 @@ app.post('/api/addPhoto', upload.single('file'), imageController.addPhoto,(req,r
   res.status(200).json({result: "LOGGED IN"});
 });
 
+app.get('/pending', (req,res) =>{
+  res.status(200).json({done:true});
+});
+
 server.listen(3000, () => {
   console.log("listening at port 3000")
 });
 
+
+module.exports = app;
