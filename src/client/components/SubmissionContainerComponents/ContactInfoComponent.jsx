@@ -11,13 +11,13 @@ const ContactInfoComponent = (props) => {
           <h2>Social Media Submissions</h2>
           <h3>Please enter your contact details, so we can share your social media post!</h3>
 
-          <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleTextChange} value={props.firstName} type="text"/>
+          <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleTextChange} type="text"/> 
           <br></br>
 
-          <input className="inputContactDetails" id="lastName" placeholder='Last Name' onChange={props.handleChange} value={props.lastName} type="text"/>
+          <input className="inputContactDetails" id="lastName" placeholder='Last Name' onChange={props.handleChange} type="text"/>
           <br></br>
 
-          <input className="inputContactDetails" id="email" placeholder='Email Address' onChange={props.handleChange} value={props.email} type="text"/>
+          <input className="inputContactDetails" id="email" placeholder='Email Address' onChange={props.handleChange} type="text"/>
           <br></br>
 
           <button className="standardBlueButton"><Link to={`/submission/socialmediadetails`}>Continue</Link></button>

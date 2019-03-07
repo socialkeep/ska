@@ -3,6 +3,7 @@
 export const CLEAR_FORM_DATA = 'CLEAR_FORM_DATA';
 export const HANDLE_TEXT_CHANGE = 'HANDLE_TEXT_CHANGE';
 export const HANDLE_SUBMIT_FORM_DATA = 'HANDLE_SUBMIT_FORM_DATA';
+export const ADD_PHOTO = 'ADD_PHOTO';
 
 //userData actions
 export const HANDLE_LOG_IN = 'HANDLE_LOG_IN'
