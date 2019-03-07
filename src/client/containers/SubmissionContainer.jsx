@@ -35,7 +35,7 @@ class SubmissionContainer extends Component {
     this.createItem = this.createItem.bind(this);
   }
   
-
+  //TODO: do we need this one?
   changePhoto(e){
     const data = { 
       id: e.target.id, 
@@ -45,7 +45,9 @@ class SubmissionContainer extends Component {
   }
 
   handleChange(e){
-    this.props.handleTextChange
+    e.preventDefault();
+    //this.setState({ [e.target.id]: e.target.value });
+    this.props.handleTextChange(data);
   }
 
   //createPhoto
@@ -94,9 +96,9 @@ class SubmissionContainer extends Component {
 
   }
 
-
   render() {
     const { match } = this.props;
+    const { handleTextChange } = this.props;
     console.log("match??", match)
 
     return (
@@ -118,18 +120,38 @@ class SubmissionContainer extends Component {
                 <Link to={`${match.url}/thankyou`}>Thank You</Link>     
           </div>
 
-
           <Route 
               path={`${match.path}/contactdetails`}
-              render={(props)=><ContactInfoComponent props={props}/>}
+              render={(props)=><ContactInfoComponent 
+                props={props} 
+                handleTextChange={handleTextChange}
+                firstName={this.props.firstName}
+                lastName={this.props.lastName}
+                email={this.props.email}          
+                />}
+                
           /> 
           <Route
               path={`${match.path}/socialmediadetails`}
-              render={(props)=><SocialMediaComponent props={props}/>}
+              render={(props)=><SocialMediaComponent 
+              props={props} 
+              handleChange={this.handleChange}
+              instagram={this.props.Instagram}
+              facebook={this.props.Facebook}
+              twitter={this.props.Twitter}
+              />}
           />
           <Route
               path={`${match.path}/postandphotodetails`}
-              render={(props)=><PostAndPhotoComponent props={props}/>}  
+              render={(props)=><
+                PostAndPhotoComponent 
+                props={props}
+                handleChange={this.handleChange}
+                createItem={this.createItem}
+                submitData={this.submitData}
+                socialMediaPostText={this.props.socialMediaPostText} 
+                file={this.props.file}
+              />}  
           /> 
           <Route
               path={`${match.path}/thankyou`}
@@ -143,6 +165,9 @@ class SubmissionContainer extends Component {
 }
 // export default connect(mapStateToProps, mapDispatchToProps)(SubmissionContainer);
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SubmissionContainer));
+
+
+
 
 
   //  {/* render= {(props) => 

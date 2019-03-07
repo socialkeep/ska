@@ -27,7 +27,14 @@ class AdminLoginContainer extends Component {
 
   changeText(e){
     const data = { id: e.target.id, text: e.target.value }
+    
     this.props.handleTextChange(data);
+  }
+
+  handleChange(e){
+    e.preventDefault();
+    this.setState({ [e.target.id]: e.target.value });
+    this.props.handleTextChange
   }
 
   verifyLogIn(){
@@ -44,6 +51,7 @@ class AdminLoginContainer extends Component {
         isLoggedIn={this.props.isLoggedIn}
         email={this.props.email}
         password={this.props.password}
+        handleChange={this.handleChange}
         />
       </div>
     )

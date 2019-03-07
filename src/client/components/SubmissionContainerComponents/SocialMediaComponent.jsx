@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const SocialMediaComponent = (props) => {
@@ -15,7 +16,7 @@ const SocialMediaComponent = (props) => {
 
           <input id="twitter" placeholder='Twitter' onChange={props.handleChange} value={props.twitter} type="text"/>
           
-          <button><Link to={`${match.url}/postandphotodetails`}>Continue</Link></button>
+          <button><Link to={`/submisssion/postandphotodetails`}>Continue</Link></button>
       </div>
 
     )

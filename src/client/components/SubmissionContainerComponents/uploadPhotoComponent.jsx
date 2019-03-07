@@ -1,4 +1,6 @@
 import {useDropzone} from 'react-dropzone'
+import { Link } from 'react-router-dom';
+
 
 function Basic(props) {
   const {acceptedFiles, getRootProps, getInputProps} = useDropzone()
