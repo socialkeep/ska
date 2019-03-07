@@ -2,10 +2,11 @@ import React from 'react';
 
 
 const ContactInfoComponent = (props) => {
+  console.log("contact info component props", props)
 
     return (
       <div className="PostAndPhotoComponent">
-            <p>hi</p>
+            <p>hello</p>
       </div>
     )
 }

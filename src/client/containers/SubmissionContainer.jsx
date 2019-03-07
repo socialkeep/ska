@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Switch, Route, withRouter, Link } from 'react-router-dom';
+import { Switch, Route, withRouter, Link, BrowserRouter as Router } from 'react-router-dom';
 import * as actions from '../store/actions.js'
 
 import ContactInfoComponent from '../components/ContactInfoComponent.jsx';
@@ -32,7 +32,7 @@ const mapDispatchToProps = (dispatch) => ({
 class SubmissionContainer extends Component {
   constructor(props) {
     super(props);
-
+    console.log("submission props",props)
     this.changePhoto = this.changePhoto.bind(this);
     this.createItem = this.createItem.bind(this);
   }
@@ -65,23 +65,30 @@ class SubmissionContainer extends Component {
 
 
   render() {
-    console.log(this.state);
+    const { match } = this.props;
+    console.log("match??", match)
+
     return (
       <div className="submissionContainer">
-      <div className='button'>
-            <Link to="/contactdetails">Contact Details</Link>     
-      </div>
+      <Router>
+        <div>
+          <div className='button'>
+                <Link to={`${match.url}/contactdetails`}>Contact Details</Link>     
+          </div>
+          <Route 
+              path={`${match.path}/contactdetails`}
+              render={(props)=><ContactInfoComponent props={props}/>}
+          /> 
 
+        </div>
 
-
+      </Router>
+     
         <p>Hello from Submission Container!</p>
         <div>
-          <Route 
-            path='/contactdetails'
-            component={ContactInfoComponent}
 
-        
-          />
+
+          
           {/* <Route
             exact path='/socialmediadetails'
             render= {(props) => <SocialMediaComponent {...props}
@@ -105,12 +112,13 @@ class SubmissionContainer extends Component {
             exact path='/thankyou'
             component={ThankYouComponent}
           />     */}
+
         </div>
       </div>
     )  
   }
 }
-
+// export default connect(mapStateToProps, mapDispatchToProps)(SubmissionContainer);
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SubmissionContainer));
 
 

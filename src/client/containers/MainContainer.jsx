@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, Link, BrowserRouter as Router } from 'react-router-dom';
 
 import SubmissionContainer from './SubmissionContainer.jsx';
 import AdminLoginContainer from './AdminLoginContainer.jsx';
@@ -14,22 +14,32 @@ const MainContainer = (props) => {
   return (
     <div className="mainContainer">
       <p>Hello from Main Container!</p>
-      <Switch>
-        <Route 
-          exact path='/'
-          component={SubmissionContainer}
-        />
-        <Route
+      <Router>
+        <div>
+          <Link to="/submission">Submission Container</Link> 
+          <Link to="/adminlogin">Admin Login</Link>     
+          <Link to="/review">Review container</Link>     
+
+
+          <Route 
+            exact path='/submission'
+            render={(props)=><SubmissionContainer/>}
+          />
+          {/* <Route
           exact path='/adminlogin'
-          component={AdminLoginContainer}
+          render={(props)=><SubmissionContainer/>}
         />
         <Route
           exact path='/review'
-          component={ReviewContainer}
-        />
-      </Switch>
+          render={(props)=><SubmissionContainer/>}
+        />  */}
+
+        </div>
+       
+      </Router>
     </div>
   )
 }
+export default connect(mapStateToProps, null)(MainContainer);
 
-export default withRouter(connect(mapStateToProps, null)(MainContainer));
+// export default withRouter(connect(mapStateToProps, null)(MainContainer));

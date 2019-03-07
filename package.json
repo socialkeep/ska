@@ -31,15 +31,12 @@
     "path": "^0.12.7",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-<<<<<<< HEAD
     "react-dropzone": "^10.0.0",
-=======
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
->>>>>>> 7d7fcf2380693ab6ded5a9bd92ab64a18abac159
     "webpack": "^4.29.6"
   },
   "devDependencies": {
