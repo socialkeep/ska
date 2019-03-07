@@ -40,6 +40,11 @@ app.get('/pending', displayController.getPending, (req, res) => {
   res.send(res.locals.getPending);
 })
 
+// MELODY DO WE STILL NEED THIS??
+app.get('/pending', (req,res) =>{
+  res.status(200).json({done:true});
+});
+
 // gets all accepted posts for admin view (accepted tab)
 app.get('/accepted', displayController.getAccepted, (req, res) => {
   res.send(res.locals.getAccepted);
@@ -61,5 +66,7 @@ app.use((err, req, res, next) => {
 
 
 server.listen(3000, () => {
-  console.log("listening at port 3000")
+  console.log("listening on port 3000")
 });
+
+module.exports = app;
