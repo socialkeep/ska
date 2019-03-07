@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { Switch, Route, withRouter, Link } from 'react-router-dom';
 import * as actions from '../store/actions.js'
 
-import ReviewComponent from '../components/ReviewStatusFiltersComponent.jsx';
+import ReviewStatusFiltersComponent from '../components/ReviewStatusFiltersComponent.jsx';
+import CardComponent from '../components/CardComponent.jsx';
 
 
 const mapStateToProps = (store) => ({
@@ -22,24 +23,43 @@ class ReviewContainer extends Component {
     super(props);
   }
 
-  handleSelectFilter(e){
+  handleFilter(event){
+    fetch(`/${event.target.id}`,{
+      method:'GET',
+    })
+    .then(
+      res => res.json())
+    .then((result) => {
+      const data = {
+        cardData: result,
+        status: event.target.id
+      }
 
-    this.props.handleSelectFilter(e.target.id)
+      this.props.handleSelectFilter(data)
+    }).catch(err => console.log(err))
   }
 
 
-  
-
-
-
   render() {
-    console.log(this.state);
+    console.log(this.props);
+
+    const { cardData } = this.props;
+
+    const cardArray = [];
+
+    for (let i = 0; i < cardData.length; i +=1 ) {
+      cardArray.push(<CardComponent data={cardData[i]} />)
+    }
+
+
     return (
       <div className="reviewContainer">
         <p>Hello from Review Container!</p>
-        <ReviewComponent />
-        <CardComponent />
-          
+        <ReviewStatusFiltersComponent 
+         filterStatus={this.props.filterStatus}
+         handleSelectFilter={this.props.handleSelectFilter}
+        />
+        {cardArray}
       </div>
     )  
   }

@@ -25,14 +25,14 @@ const MainContainer = (props) => {
             exact path='/submission'
             render={(props)=><SubmissionContainer/>}
           />
-          {/* <Route
+          <Route
           exact path='/adminlogin'
-          render={(props)=><SubmissionContainer/>}
+          render={(props)=><AdminLoginContainer/>}
         />
         <Route
           exact path='/review'
-          render={(props)=><SubmissionContainer/>}
-        />  */}
+          render={(props)=><ReviewContainer/>}
+        /> 
 
         </div>
        

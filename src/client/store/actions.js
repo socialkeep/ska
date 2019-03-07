@@ -9,25 +9,23 @@ export const handleTextChange = (data) => ({
 //   type: types.HANDLE_LOGIN,
 // })
 
-export const handleSelectFilter = (id) => (
-  fetch(`/${id}`,{
-    method:'GET',
-  })
-  .then(
-    res => res.json())
-  .then((result) => {
-    
-    const data = {
-      cardData: result,
-      status: id
-    }
+
+export const handleSubmitFormData = (data) => ({
+  type: types.HANDLE_SUBMIT_FORM_DATA,
+  payload: data
+})
+
+
+
+
+export const handleSelectFilter = (data) => {
     return {
       type: types.SELECT_FILTER,
       payload: data
     }
     console.log(result);
     // const fav = JSON.parse(result);
-  });
+}
 
 
 

@@ -12,11 +12,11 @@ const cardDataReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case types.SELECT_FILTER:
-      newState = state.slice();
-      newState[filterStatus] =  action.payload.status;
-      newState[cardData] = action.payload.cardData;
-      return newState;
-   
+      return {
+        ...state,
+        filterStatus: action.payload.status,
+        cardData: action.payload.cardData
+      }
     default:
       return state;
   }
