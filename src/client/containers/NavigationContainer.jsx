@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import NavigationComponent from '../components/NavigationComponent';
-import MainContainer from '../containers/MainContainer';
+import NavigationComponent from '../components/NavigationComponent.jsx';
 
 import * as actions from '../store/actions.js';
 
@@ -17,11 +16,13 @@ class NavigationContainer extends Component {
   }
 
   render() {
+    return (
     <div className="Nav">
       <NavigationComponent
        isLoggedIn={this.props.isLoggedIn}
        />
     </div>
+    )
   }
 }
 

@@ -1,18 +1,25 @@
-import React from 'react';
+import React , { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import NavigationContainer from '../containers/NavigationContainer';
-import MainContainer from '../containers/MainContainer';
+import NavigationContainer from '../containers/NavigationContainer.jsx';
+import MainContainer from '../containers/MainContainer.jsx';
 
-const App = () => {
+class App extends Component {
+  constructor(props) {
+    super(props)
+  }
 
-  return (
-    <Router>
-      <div>
-        <NavigationContainer />
-        <MainContainer />
-      </div>
-    </Router>
-  )
+  render() {
+
+    return (
+      <Router>
+        <div>
+          <NavigationContainer />
+          <MainContainer />
+        </div>
+      </Router>
+    )
+  }
+
 }
 
 export default App;
