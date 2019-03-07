@@ -3,6 +3,7 @@ const fs = require('fs');
 const imageController = {}
 
 imageController.addPhoto = (req,res,next) => {
+  console.log("file??", req.file);
   if (req.file === null) return next();
 
 
