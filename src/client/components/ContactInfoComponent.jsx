@@ -5,7 +5,7 @@ const ContactInfoComponent = (props) => {
 
     return (
       <div className="PostAndPhotoComponent">
-            <p>hi</p>
+            <p>PostAndPhotoComponent</p>
       </div>
     )
 }

@@ -5,6 +5,10 @@ export const handleTextChange = (data) => ({
   payload: data
 });
 
+export const handleLogin = () => ({
+  type: types.HANDLE_LOGIN,
+})
+
 
 
 

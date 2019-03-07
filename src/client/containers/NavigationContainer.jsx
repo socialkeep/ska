@@ -17,7 +17,7 @@ class NavigationContainer extends Component {
 
   render() {
     return (
-    <div className="Nav">
+    <div className="navigationContainer">
       <NavigationComponent
        isLoggedIn={this.props.isLoggedIn}
        />

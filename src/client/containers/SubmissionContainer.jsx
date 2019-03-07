@@ -68,6 +68,8 @@ class SubmissionContainer extends Component {
     console.log(this.state);
     return (
       <div className="submissionContainer">
+        <h1>SocialKeep</h1>
+        <h2>Social Media Submissions</h2>
       <div className='button'>
             <Link to="/contactdetails">Contact Details</Link>     
       </div>
@@ -82,7 +84,7 @@ class SubmissionContainer extends Component {
 
         
           />
-          {/* <Route
+          <Route
             exact path='/socialmediadetails'
             render= {(props) => <SocialMediaComponent {...props}
                     instagram={this.props.instagram}
@@ -104,7 +106,7 @@ class SubmissionContainer extends Component {
           <Route 
             exact path='/thankyou'
             component={ThankYouComponent}
-          />     */}
+          />    
         </div>
       </div>
     )  
