@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   import React, { Component } from 'react';
   import Dropzone from 'react-dropzone'
 
@@ -113,11 +114,30 @@ class App extends Component {
           })}</div> */}
           <div>
           <button className="addItemButton" onClick={this.createItem}>Add Item</button>
-        </div>
-      </div>
-    );
+=======
+import React , { Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import NavigationContainer from '../containers/NavigationContainer.jsx';
+import MainContainer from '../containers/MainContainer.jsx';
+
+class App extends Component {
+  constructor(props) {
+    super(props)
   }
+
+  render() {
+
+    return (
+      <Router>
+        <div>
+          <NavigationContainer />
+          <MainContainer />
+>>>>>>> 7d7fcf2380693ab6ded5a9bd92ab64a18abac159
+        </div>
+      </Router>
+    )
+  }
+
 }
 
 export default App;
-
