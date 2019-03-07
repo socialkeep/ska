@@ -9,18 +9,15 @@ const AdminInfoComponent = (props) => {
         <h2>Administrator Login</h2>
         <h3>Please enter your login details.</h3>
 
-        <input id="emailAddress" placeholder='Email Address' onChange={props.handleChange} value={props.email} type="text"/>
+        <input className="inputContactDetails" id="emailAddress" placeholder='Email Address' onChange={props.handleChange} value={props.email} type="text"/>
+        <br></br>
 
-        <input id="password" placeholder='Password' onChange={props.handleChange} value={props.password} type="text"/>   
-        <div className='aws_cluster_form_container_button'>
+        <input className="inputContactDetails" id="password" placeholder='Password' onChange={props.handleChange} value={props.password} type="text"/>   
+        <br></br>
 
-        <button className='buttons'>Submit</button>
+        <button className="standardBlueButton">Submit</button>
       </div>    
 
-
-
-
-      </div>
     )
 }
 

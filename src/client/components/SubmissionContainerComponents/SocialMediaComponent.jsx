@@ -10,13 +10,16 @@ const SocialMediaComponent = (props) => {
           <h2>Social Media Submissions</h2>
           <h3>Please enter a social handle for the platforms you would like your post to be featured on.</h3>
 
-          <input id="instagram" placeholder='Instagram' onChange={props.handleChange} value={props.instagram} type="text"/>
+          <input className="inputContactDetails" id="instagram" placeholder='Instagram' onChange={props.handleChange} value={props.instagram} type="text"/>
+          <br></br>
 
-          <input id="facebook" placeholder='Facebook' onChange={props.handleChange} value={props.facebook} type="text"/>
+          <input className="inputContactDetails" id="facebook" placeholder='Facebook' onChange={props.handleChange} value={props.facebook} type="text"/>
+          <br></br>
 
-          <input id="twitter" placeholder='Twitter' onChange={props.handleChange} value={props.twitter} type="text"/>
+          <input className="inputContactDetails" id="twitter" placeholder='Twitter' onChange={props.handleChange} value={props.twitter} type="text"/>
+          <br></br>
           
-          <button><Link to={`/submisssion/postandphotodetails`}>Continue</Link></button>
+          <button className="standardBlueButton"><Link to={`/submisssion/postandphotodetails`}>Continue</Link></button>
       </div>
 
     )
