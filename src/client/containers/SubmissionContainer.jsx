@@ -102,63 +102,66 @@ class SubmissionContainer extends Component {
     console.log("match??", match)
 
     return (
-      <div className="submissionContainer">
-      <Router>
-        <div>
-        <h1>SocialKeep</h1>
-        <h2>Social Media Submissions</h2>
-          <div className='button'>
-                <Link to={`${match.url}/contactdetails`}>Contact Details</Link>     
-          </div>
-          <div className='button'>
-                <Link to={`${match.url}/socialmediadetails`}>Social Media Details</Link>     
-          </div>
-          <div className='button'>
-                <Link to={`${match.url}/postandphotodetails`}>Post and Photo Details</Link>     
-          </div>
-          <div className='button'>
-                <Link to={`${match.url}/thankyou`}>Thank You</Link>     
-          </div>
+      <div className="card">
+        <div className="submissionContainer">
+          <div class="level2Text">Social Media Submissions</div>
 
-          <Route 
-              path={`${match.path}/contactdetails`}
-              render={(props)=><ContactInfoComponent 
+        <Router>
+          <div>
+            {/* <div className='button'>
+                  <Link to={`${match.url}/contactdetails`}>Contact Details</Link>     
+            </div>
+            <div className='button'>
+                  <Link to={`${match.url}/socialmediadetails`}>Social Media Details</Link>     
+            </div>
+            <div className='button'>
+                  <Link to={`${match.url}/postandphotodetails`}>Post and Photo Details</Link>     
+            </div>
+            <div className='button'>
+                  <Link to={`${match.url}/thankyou`}>Thank You</Link>     
+            </div> */}
+
+            <Route 
+                path={'/' || `${match.path}/contactdetails`}
+                render={(props)=><ContactInfoComponent 
+                  props={props} 
+                  handleTextChange={handleTextChange}
+                  firstName={this.props.firstName}
+                  lastName={this.props.lastName}
+                  email={this.props.email}          
+                  />}
+                  
+            /> 
+            <Route
+                path={`${match.path}/socialmediadetails`}
+                render={(props)=><SocialMediaComponent 
                 props={props} 
-                handleTextChange={handleTextChange}
-                firstName={this.props.firstName}
-                lastName={this.props.lastName}
-                email={this.props.email}          
-                />}
-                
-          /> 
-          <Route
-              path={`${match.path}/socialmediadetails`}
-              render={(props)=><SocialMediaComponent 
-              props={props} 
-              handleChange={this.handleChange}
-              instagram={this.props.Instagram}
-              facebook={this.props.Facebook}
-              twitter={this.props.Twitter}
-              />}
-          />
-          <Route
-              path={`${match.path}/postandphotodetails`}
-              render={(props)=><
-                PostAndPhotoComponent 
-                props={props}
                 handleChange={this.handleChange}
-                createItem={this.createItem}
-                submitData={this.submitData}
-                socialMediaPostText={this.props.socialMediaPostText} 
-                file={this.props.file}
-              />}  
-          /> 
-          <Route
-              path={`${match.path}/thankyou`}
-              component={ThankYouComponent}
-          />   
-        </div>
-      </Router>
+                instagram={this.props.Instagram}
+                facebook={this.props.Facebook}
+                twitter={this.props.Twitter}
+                />}
+            />
+            <Route
+                path={`${match.path}/postandphotodetails`}
+                render={(props)=><
+                  PostAndPhotoComponent 
+                  props={props}
+                  handleChange={this.handleChange}
+                  createItem={this.createItem}
+                  submitData={this.submitData}
+                  socialMediaPostText={this.props.socialMediaPostText} 
+                  file={this.props.file}
+                />}  
+            /> 
+            <Route
+                path={`${match.path}/thankyou`}
+                component={ThankYouComponent}
+            />  
+          
+          </div>
+        </Router>
+        </div> 
       </div>
     )  
   }

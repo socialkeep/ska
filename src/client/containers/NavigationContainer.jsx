@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Router } from 'react-router-dom';
 
 import NavigationComponent from '../components/NavigationComponent.jsx';
 
@@ -18,13 +18,15 @@ class NavigationContainer extends Component {
   render() {
     return (
     <div className="navigationContainer">
-      <NavigationComponent
-       isLoggedIn={this.props.isLoggedIn}
-       />
+        <NavigationComponent
+        isLoggedIn={this.props.isLoggedIn}
+        />
     </div>
     )
   }
 }
 
-export default connect(mapStateToProps, null)(NavigationContainer);
+export default withRouter(connect(mapStateToProps, null)(NavigationContainer));
+
+//export default connect(mapStateToProps, null)(NavigationContainer);
 // export default withRouter(connect(mapStateToProps, null)(NavigationContainer));
