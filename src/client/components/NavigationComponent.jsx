@@ -7,12 +7,12 @@ const NavigationComponent = (props) => {
     <div className="navigationComponent">
       {(props.isLoggedIn === false) && (
         <div className="navigationComponentItem">
-        <Link to="/review">Log In</Link>
+        {/* <Link to="/review">Log In</Link> */}
       </div>
       )}
       {(props.isLoggedIn === true) && (
         <div className="navigationComponentItem">
-        <Link to="/review">Log Out</Link>
+        {/* <Link to="/review">Log Out</Link> */}
       </div>
       )}
     </div>

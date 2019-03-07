@@ -5,9 +5,31 @@ export const handleTextChange = (data) => ({
   payload: data
 });
 
-export const handleLogin = () => ({
-  type: types.HANDLE_LOGIN,
-})
+// export const handleLogin = () => ({
+//   type: types.HANDLE_LOGIN,
+// })
+
+export const handleSelectFilter = (id) => (
+  fetch(`/${id}`,{
+    method:'GET',
+  })
+  .then(
+    res => res.json())
+  .then((result) => {
+    
+    const data = {
+      cardData: result,
+      status: id
+    }
+    return {
+      type: types.SELECT_FILTER,
+      payload: data
+    }
+    console.log(result);
+    // const fav = JSON.parse(result);
+  });
+
+
 
 
 

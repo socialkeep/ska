@@ -26,4 +26,5 @@ class NavigationContainer extends Component {
   }
 }
 
-export default withRouter(connect(mapStateToProps, null)(NavigationContainer));
+export default connect(mapStateToProps, null)(NavigationContainer);
+// export default withRouter(connect(mapStateToProps, null)(NavigationContainer));

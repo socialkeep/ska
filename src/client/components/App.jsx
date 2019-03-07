@@ -11,12 +11,10 @@ class App extends Component {
   render() {
 
     return (
-      <Router>
         <div>
           <NavigationContainer />
           <MainContainer />
         </div>
-      </Router>
     )
   }
 

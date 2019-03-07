@@ -30,7 +30,9 @@ class AdminLoginContainer extends Component {
     this.props.handleTextChange(data);
   }
 
-  verifyLogIn()
+  verifyLogIn(){
+    
+  }
 
 
 
