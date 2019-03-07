@@ -24,6 +24,9 @@ const mapStateToProps = (store) => ({
 const mapDispatchToProps = (dispatch) => ({
   handleTextChange: (data) => {
     dispatch(actions.handleTextChange(data))
+  },
+  addPhoto: (data) => {
+    dispatch(actions.addPhoto(data))
   }
 })
  
@@ -32,27 +35,22 @@ class SubmissionContainer extends Component {
     super(props);
     console.log("submission props",props)
     this.changePhoto = this.changePhoto.bind(this);
-    this.createItem = this.createItem.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.submitData = this.submitData.bind(this);
   }
-  
-  //TODO: do we need this one?
+
   changePhoto(e){
-    const data = { 
-      id: e.target.id, 
-      text: e.target.value 
-    }
-    this.props.handleTextChange(data);
+    this.props.addPhoto(e.target.files[0]);
   }
 
   handleChange(e){
     e.preventDefault();
-    //this.setState({ [e.target.id]: e.target.value });
-    this.props.handleTextChange(data);
+    this.props.handleTextChange({ id:e.target.id, text:e.target.value });
   }
 
   //createPhoto
-  createItem(){
-    const body = this.state;
+  createPhoto(e){
+    const body = e.target.files[0];
     let formBody = new FormData();
     Object.keys(body).map(key => {
       formBody.append(key, body[key]);
@@ -84,22 +82,25 @@ class SubmissionContainer extends Component {
       file: this.props.file
     }
 
-    fetch('/postContent', {
-      method: 'POST',
-      body: postData
-    })
-    .then(
-      res => res.json())
-    .then((result) => {
-      console.log(result);
-    })
+    console.log("SUBMIT DATA data ", postData)
+
+    // fetch('/postContent', {
+    //   method: 'POST',
+    //   body: postData
+    // })
+    // .then(
+    //   res => res.json())
+    // .then((result) => {
+    //   console.log(result);
+    // })
 
   }
 
   render() {
+    console.log("ksdfhkjdsh")
     const { match } = this.props;
     const { handleTextChange } = this.props;
-    console.log("match??", match)
+    console.log("match??", this.props)
 
     return (
       <div className="card">
@@ -137,31 +138,38 @@ class SubmissionContainer extends Component {
                 render={(props)=><SocialMediaComponent 
                 props={props} 
                 handleChange={this.handleChange}
-                instagram={this.props.Instagram}
-                facebook={this.props.Facebook}
-                twitter={this.props.Twitter}
+                firstName={this.props.firstName}
+                lastName={this.props.lastName}
+                email={this.props.email}          
                 />}
-            />
-            <Route
-                path={`${match.path}/postandphotodetails`}
-                render={(props)=><
-                  PostAndPhotoComponent 
-                  props={props}
-                  handleChange={this.handleChange}
-                  createItem={this.createItem}
-                  submitData={this.submitData}
-                  socialMediaPostText={this.props.socialMediaPostText} 
-                  file={this.props.file}
-                />}  
-            /> 
-            <Route
-                path={`${match.path}/thankyou`}
-                component={ThankYouComponent}
-            />  
-          
-          </div>
-        </Router>
-        </div> 
+                
+          /> 
+          <Route
+              path={`${match.path}/socialmediadetails`}
+              render={(props)=><SocialMediaComponent 
+              props={props} 
+              handleChange={this.handleChange}
+              instagram={this.props.Instagram}
+              facebook={this.props.Facebook}
+              twitter={this.props.Twitter}
+              />}
+          />
+          <Route
+              path={`${match.path}/postandphotodetails`}
+              render={(props)=><PostAndPhotoComponent 
+                props={props}
+                handleChange={this.handleChange}
+                changePhoto={this.changePhoto}
+                submitData={this.submitData}
+                // file={this.props.file}
+              />}
+          /> 
+          <Route
+              path={`${match.path}/thankyou`}
+              component={ThankYouComponent}
+          />   
+        </div>
+      </Router>
       </div>
     )  
   }

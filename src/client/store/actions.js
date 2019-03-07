@@ -9,6 +9,11 @@ export const handleTextChange = (data) => ({
 //   type: types.HANDLE_LOGIN,
 // })
 
+export const addPhoto = (file) => ({
+  type: types.ADD_PHOTO,
+  payload: file
+});
+
 
 export const handleSubmitFormData = (data) => ({
   type: types.HANDLE_SUBMIT_FORM_DATA,

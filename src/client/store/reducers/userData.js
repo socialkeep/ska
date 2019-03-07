@@ -10,11 +10,12 @@ const initialState = {
 
 const userDataReducer = (state = initialState, action) => {
   let newState;
+  console.log("user data reducer payload ", action.payload)
 
   switch(action.type) {
     case types.HANDLE_TEXT_CHANGE:
-      newState = state.slice();
-      newState[data.id] = data.text;
+      newState = Object.assign({},state);
+      newState[action.payload.id] = action.payload.text;
       return newState;
     default: return state;  
   }

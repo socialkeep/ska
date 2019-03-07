@@ -9,15 +9,15 @@ const ContactInfoComponent = (props) => {
       <div className="SubmissionComponents" className="PostAndPhotoComponent">
           <h3>Please enter your contact details, so we can share your social media post!</h3>
 
-          <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleTextChange} value={props.firstName} type="text"/>
+          <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleTextChange} type="text"/> 
           <br></br>
           <br></br>
 
-          <input className="inputContactDetails" id="lastName" placeholder='Last Name' onChange={props.handleChange} value={props.lastName} type="text"/>
+          <input className="inputContactDetails" id="lastName" placeholder='Last Name' onChange={props.handleChange} type="text"/>
           <br></br>
           <br></br>
 
-          <input className="inputContactDetails" id="email" placeholder='Email Address' onChange={props.handleChange} value={props.email} type="text"/>
+          <input className="inputContactDetails" id="email" placeholder='Email Address' onChange={props.handleChange} type="text"/>
           <br></br>
           <br></br>
 

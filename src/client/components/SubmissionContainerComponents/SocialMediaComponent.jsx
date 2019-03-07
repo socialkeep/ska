@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 const SocialMediaComponent = (props) => {
-
+    console.log("SM component", props);
     return (
        <div className="socialMediaComponent">
           <h1>SocialKeep</h1>
