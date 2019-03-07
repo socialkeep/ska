@@ -11,7 +11,7 @@ const ContactInfoComponent = (props) => {
           <h2>Social Media Submissions</h2>
           <h3>Please enter your contact details, so we can share your social media post!</h3>
 
-          <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleTextChange} type="text"/> 
+          <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleChange} type="text"/> 
           <br></br>
 
           <input className="inputContactDetails" id="lastName" placeholder='Last Name' onChange={props.handleChange} type="text"/>

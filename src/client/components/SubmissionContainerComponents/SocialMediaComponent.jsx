@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 const SocialMediaComponent = (props) => {
     console.log("SM component", props);
+    const { match } = props.props;
+
     return (
        <div className="socialMediaComponent">
           <h1>SocialKeep</h1>
@@ -19,7 +21,7 @@ const SocialMediaComponent = (props) => {
           <input className="inputContactDetails" id="twitter" placeholder='Twitter' onChange={props.handleChange} value={props.twitter} type="text"/>
           <br></br>
           
-          <button className="standardBlueButton"><Link to={`/submisssion/postandphotodetails`}>Continue</Link></button>
+          <button className="standardBlueButton"><Link to={`/submission/postandphotodetails`}>Continue</Link></button>
       </div>
 
     )
