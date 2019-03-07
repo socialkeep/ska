@@ -17,7 +17,7 @@ class App extends Component {
               <NavigationContainer />
               <MainContainer />
               <footer>
-                For more information about SocialKeep, visit SocialKeep.io.
+                <div className="level5Text"> For more information about SocialKeep, <br></br> visit SocialKeep.io.</div>
               </footer>  
         </div>
       </Router>

@@ -7,7 +7,11 @@ const ContactInfoComponent = (props) => {
 
     return (
       <div className="SubmissionComponents" className="PostAndPhotoComponent">
-          <h3>Please enter your contact details, so we can share your social media post!</h3>
+         <br></br>
+          <div className="level3Text">Please enter your contact details, <br></br> so we can share your social media post!</div>
+          <br></br>
+
+          <div className="formContent">
 
           <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleTextChange} type="text"/> 
           <br></br>
@@ -22,6 +26,7 @@ const ContactInfoComponent = (props) => {
           <br></br>
 
           <button className="standardBlueButton"><Link to={`/submission/socialmediadetails`}>Continue</Link></button>
+          </div>
       </div>
     )
 }

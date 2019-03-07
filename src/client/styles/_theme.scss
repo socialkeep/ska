@@ -16,7 +16,7 @@ $bluefont: #08548E;
 $input-field-font-color: #8E8A8A;
 
 //light grey fonts
-$light-font-color: #7C7A7A;
+$light-font-color: #343434;
 
 //button color
 $button-blue: #CBECF4;
@@ -25,8 +25,7 @@ $button-red: #E31717;
 $button-yellow: #F2DA2A;
 
 //Rounded edges
-$border-radius: 10
-px;
+$border-radius: 8px;
 $input-fields-box-shadow: inset 2px 2px 2px 2px #E3E7E9;
 
 
@@ -39,8 +38,4 @@ $border-color: darken($bg-color, 5%);
 // background-image: 
 /* ------ SIDE PANEL ------ */
 
-$side-bar-width: 350px;
 
-/* ------ GRAPH ------ */
-$light-font-color:rgba(235, 228, 228, 0.932);
-$title-font: $font-family;

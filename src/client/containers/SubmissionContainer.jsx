@@ -84,7 +84,7 @@ class SubmissionContainer extends Component {
 
     console.log("SUBMIT DATA data ", postData)
 
-    // fetch('/postContent', {
+    // fetch('/createpost', {
     //   method: 'POST',
     //   body: postData
     // })
@@ -105,32 +105,21 @@ class SubmissionContainer extends Component {
     return (
       <div className="card">
         <div className="submissionContainer">
-          <div class="level2Text">Social Media Submissions</div>
+          <div className="level2Text">Social Media Submissions</div>
 
         <Router>
           <div>
-            {/* <div className='button'>
-                  <Link to={`${match.url}/contactdetails`}>Contact Details</Link>     
-            </div>
-            <div className='button'>
-                  <Link to={`${match.url}/socialmediadetails`}>Social Media Details</Link>     
-            </div>
-            <div className='button'>
-                  <Link to={`${match.url}/postandphotodetails`}>Post and Photo Details</Link>     
-            </div>
-            <div className='button'>
-                  <Link to={`${match.url}/thankyou`}>Thank You</Link>     
-            </div> */}
+            
 
-            <Route 
-                path={'/' || `${match.path}/contactdetails`}
-                render={(props)=><ContactInfoComponent 
-                  props={props} 
-                  handleTextChange={handleTextChange}
-                  firstName={this.props.firstName}
-                  lastName={this.props.lastName}
-                  email={this.props.email}          
-                  />}
+          <Route 
+              path={'/' || `${match.path}/contactdetails`}
+              render={(props)=><ContactInfoComponent 
+                props={props} 
+                handleTextChange={handleTextChange}
+                firstName={this.props.firstName}
+                lastName={this.props.lastName}
+                email={this.props.email}          
+                />}
                   
             /> 
             <Route
@@ -143,43 +132,60 @@ class SubmissionContainer extends Component {
                 email={this.props.email}          
                 />}
                 
-          /> 
-          <Route
-              path={`${match.path}/socialmediadetails`}
-              render={(props)=><SocialMediaComponent 
-              props={props} 
-              handleChange={this.handleChange}
-              instagram={this.props.Instagram}
-              facebook={this.props.Facebook}
-              twitter={this.props.Twitter}
-              />}
-          />
-          <Route
-              path={`${match.path}/postandphotodetails`}
-              render={(props)=><PostAndPhotoComponent 
-                props={props}
+            /> 
+            <Route
+                path={`${match.path}/socialmediadetails`}
+                render={(props)=><SocialMediaComponent 
+                props={props} 
                 handleChange={this.handleChange}
-                changePhoto={this.changePhoto}
-                submitData={this.submitData}
-                // file={this.props.file}
-              />}
-          /> 
-          <Route
-              path={`${match.path}/thankyou`}
-              component={ThankYouComponent}
+                instagram={this.props.Instagram}
+                facebook={this.props.Facebook}
+                twitter={this.props.Twitter}
+                />}
+            />
+            <Route
+                path={`${match.path}/postandphotodetails`}
+                render={(props)=><PostAndPhotoComponent 
+                  props={props}
+                  handleChange={this.handleChange}
+                  changePhoto={this.changePhoto}
+                  submitData={this.submitData}
+                  // file={this.props.file}
+                />}
+            /> 
+            <Route
+                path={`${match.path}/thankyou`}
+                component={ThankYouComponent}
           />   
         </div>
       </Router>
+
+      <div className="level4Text">Questions? Contact Social Keep at social@socialkeep.io.</div>
+      </div>
       </div>
     )  
   }
 }
+
+
+
 // export default connect(mapStateToProps, mapDispatchToProps)(SubmissionContainer);
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SubmissionContainer));
 
 
 
-
+{/* <div className='button'>
+                  <Link to={`${match.url}/contactdetails`}>Contact Details</Link>     
+            </div>
+            <div className='button'>
+                  <Link to={`${match.url}/socialmediadetails`}>Social Media Details</Link>     
+            </div>
+            <div className='button'>
+                  <Link to={`${match.url}/postandphotodetails`}>Post and Photo Details</Link>     
+            </div>
+            <div className='button'>
+                  <Link to={`${match.url}/thankyou`}>Thank You</Link>     
+            </div> */}
 
   //  {/* render= {(props) => 
   //                   <ContactInfoComponent {...props} 
@@ -194,7 +200,7 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Submissio
 
 
 
-  //  <Route
+  // // <Route
   //           exact path='/socialmediadetails'
   //           render={(props)=><SocialMediaComponent {...props}
   //                   instagram={this.props.instagram}
