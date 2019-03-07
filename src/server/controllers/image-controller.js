@@ -3,6 +3,7 @@ const fs = require('fs');
 const imageController = {}
 
 imageController.addPhoto = (req,res,next) => {
+  console.log("file??", req.file);
   if (req.file === null) return next();
 
 
@@ -10,7 +11,7 @@ imageController.addPhoto = (req,res,next) => {
 
   const params = {
     // which bucket in S3 to store file in
-    Bucket: process.env.AWS_S3_Bucket,
+    Bucket: process.env.AWS_S3_BUCKET,
     // the image data
     Body: fs.createReadStream(tempFilePath),
     // figure out type vs disposition -> type is stored format?

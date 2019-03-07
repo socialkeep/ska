@@ -1,0 +1,92 @@
+@import "theme";
+
+
+//** --------- Fonts ------------------
+h1 {
+  font-family: Arial;
+  font-size: 45px;
+  color: $bluefont;
+}
+
+h2 {
+  font-family: Arial;
+  font-size: 35px;
+  color: $standard-font-black;
+}
+
+h3 {
+  font-family: Arial;
+  font-size: 22px;
+  color: $standard-font-black;
+}
+
+h4 {
+  font-family: Arial;
+  font-size: 18px;
+  color: $light-font-color;
+}
+
+h5 {
+  font-family: Arial;
+  font-size: 16px;
+  color: $light-font-color;
+}
+
+
+//** --------- Input Fields ------------------
+
+input {
+  font-family: Arial;
+  font-size: 18px;
+  color: $input-field-font-color;
+  background-color: $bg-color;
+  box-shadow: $input-fields-box-shadow;
+  border-radius: $border-radius;
+  height: 50px;
+}
+
+#inputContactDetails {
+  width: 350px
+}
+
+//** --------- Buttons ------------------
+
+button {
+  font-family: Arial;
+  font-size: 22px;
+}
+
+#rejectButton {
+  font-family: Arial;
+  font-size: 22px;
+  color: $button-red;
+  border: $button-red;
+}
+
+#acceptButton {
+  font-family: Arial;
+  font-size: 22px;
+  color: $button-green;
+  border: $button-green;
+}
+
+#standardBlueButton {
+  font-family: Arial;
+  font-size: 22px;
+  color: $bluefont;
+  background-color: $button-blue;
+}
+
+#pendingButton  {
+  font-family: Arial;
+  font-size: 22px;
+  color: $button-yellow;
+  border: $button-yellow;
+}
+
+
+
+
+
+
+
