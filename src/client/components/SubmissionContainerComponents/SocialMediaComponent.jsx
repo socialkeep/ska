@@ -20,8 +20,8 @@ const SocialMediaComponent = (props) => {
 
           <input className="inputContactDetails" id="twitter" placeholder='Twitter' onChange={props.handleChange} value={props.twitter} type="text"/>
           <br></br>
-          
-          <button className="standardBlueButton"><Link to={`/submission/postandphotodetails`}>Continue</Link></button>
+        
+          <Link to={`/submission/postandphotodetails`}><button className="standardBlueButton">Continue</button></Link>
       </div>
 
     )

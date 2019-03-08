@@ -22,7 +22,7 @@ const ContactInfoComponent = (props) => {
           <input className="inputContactDetails" id="email" placeholder='Email Address' onChange={props.handleChange} type="text"/>
           <br></br>
 
-          <button className="standardBlueButton"><Link to={`/submission/socialmediadetails`}>Continue</Link></button>
+          <Link to="/submission/socialmediadetails"><button className="standardBlueButton">Continue</button></Link>
           </div>
       </div>
     )

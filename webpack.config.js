@@ -20,9 +20,9 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: [
-            "style-loader", // creates style nodes from JS strings
-            "css-loader", // translates CSS into CommonJS
-            "sass-loader" // compiles Sass to CSS, using Node Sass by default
+          "style-loader", // creates style nodes from JS strings
+          "css-loader", // translates CSS into CommonJS
+          "sass-loader" // compiles Sass to CSS, using Node Sass by default
         ]
       },
       {
@@ -36,15 +36,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        template: "./index.html",
-        filename: "./index.html"
+      template: "./index.html",
+      filename: "./index.html"
     })
 ],
   devServer: {
     contentBase: path.join(__dirname,'build'),
     historyApiFallback: true,
     proxy: {
-      '/api/*': {
+      '/': {
         target: 'http://localhost:3000',
         secure: false
       }
