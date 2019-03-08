@@ -112,7 +112,7 @@ class SubmissionContainer extends Component {
             
 
           <Route 
-              path={'/' || `${match.path}/contactdetails`}
+              exact path={'/' || `/submission/contactdetails`}
               render={(props)=><ContactInfoComponent 
                 props={props} 
                 handleTextChange={handleTextChange}
@@ -123,7 +123,7 @@ class SubmissionContainer extends Component {
                   
             /> 
             <Route
-                path={`${match.path}/socialmediadetails`}
+                path={`/submission/socialmediadetails`}
                 render={(props)=><SocialMediaComponent 
                 props={props} 
                 handleChange={this.handleChange}
@@ -133,8 +133,8 @@ class SubmissionContainer extends Component {
                 />}
                 
             /> 
-            <Route
-                path={`${match.path}/socialmediadetails`}
+            {/* <Route
+                path={`/submission/socialmediadetails`}
                 render={(props)=><SocialMediaComponent 
                 props={props} 
                 handleChange={this.handleChange}
@@ -142,9 +142,9 @@ class SubmissionContainer extends Component {
                 facebook={this.props.Facebook}
                 twitter={this.props.Twitter}
                 />}
-            />
+            /> */}
             <Route
-                path={`${match.path}/postandphotodetails`}
+                path={`/submission/postandphotodetails`}
                 render={(props)=><PostAndPhotoComponent 
                   props={props}
                   handleChange={this.handleChange}
@@ -154,7 +154,7 @@ class SubmissionContainer extends Component {
                 />}
             /> 
             <Route
-                path={`${match.path}/thankyou`}
+                path={`/submission/thankyou`}
                 component={ThankYouComponent}
           />   
         </div>

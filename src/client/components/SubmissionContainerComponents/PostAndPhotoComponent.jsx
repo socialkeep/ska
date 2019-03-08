@@ -14,7 +14,7 @@ const PostAndPhotoComponent = (props) => {
 
         <input className="item-upload" id="file" onChange={props.changePhoto} placeholder='Drag and drop image files here. Max size 5MB, .jpg format.' type="file" />
         
-        <button><Link to={`${match.url}/thankyou`} onClick={props.submitData}>Submit</Link></button>
+        <Link to={`/submission/thankyou`} onClick={props.submitData}><button>Submit</button></Link>
     </div>
   )
 }
