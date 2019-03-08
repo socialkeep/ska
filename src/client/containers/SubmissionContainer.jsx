@@ -84,15 +84,15 @@ class SubmissionContainer extends Component {
 
     console.log("SUBMIT DATA data ", postData)
 
-    // fetch('/createpost', {
-    //   method: 'POST',
-    //   body: postData
-    // })
-    // .then(
-    //   res => res.json())
-    // .then((result) => {
-    //   console.log(result);
-    // })
+    fetch('/postContent', {
+      method: 'POST',
+      body: postData
+    })
+    .then(
+      res => res.json())
+    .then((result) => {
+      console.log(result);
+    })
 
   }
 

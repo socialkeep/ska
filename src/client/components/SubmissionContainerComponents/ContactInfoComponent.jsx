@@ -13,7 +13,7 @@ const ContactInfoComponent = (props) => {
 
           <div className="formContent">
 
-          <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleTextChange} type="text"/> 
+          <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleChange} type="text"/> 
           <br></br>
           <br></br>
 
