@@ -12,10 +12,15 @@ class App extends Component {
   render() {
 
     return (
-        <div>
-          <NavigationContainer />
-          <MainContainer />
+      <Router>
+        <div className="gridContainer">
+              <NavigationContainer />
+              <MainContainer />
+              <footer>
+                <div className="level5Text"> For more information about SocialKeep, <br></br> visit SocialKeep.io.</div>
+              </footer>  
         </div>
+      </Router>
     )
   }
 

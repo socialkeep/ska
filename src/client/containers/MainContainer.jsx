@@ -13,16 +13,14 @@ const mapStateToProps = store => ({
 const MainContainer = (props) => {
   return (
     <div className="mainContainer">
-      <p>Hello from Main Container!</p>
-      <Router>
-        <div>
-          <Link to="/submission">Submission Container</Link> 
+
+      <div className="logoText">SocialKeep</div>          {/* <Link to="/submission">Submission Container</Link> 
           <Link to="/adminlogin">Admin Login</Link>     
-          <Link to="/review">Review container</Link>     
-
-
+          <Link to="/review">Review container</Link>      */}
+   
+          <Switch>
           <Route 
-            exact path='/submission'
+            exact path='/'
             render={(props)=><SubmissionContainer/>}
           />
           <Route
@@ -33,13 +31,11 @@ const MainContainer = (props) => {
           exact path='/review'
           render={(props)=><ReviewContainer/>}
         /> 
-
-        </div>
-       
-      </Router>
+        </Switch>
+ 
     </div>
   )
 }
-export default connect(mapStateToProps, null)(MainContainer);
+//export default connect(mapStateToProps, null)(MainContainer);
 
-// export default withRouter(connect(mapStateToProps, null)(MainContainer));
+export default withRouter(connect(mapStateToProps, null)(MainContainer));
