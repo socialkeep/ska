@@ -106,6 +106,7 @@ class SubmissionContainer extends Component {
       <div className="card">
         <div className="submissionContainer">
           <div className="level2Text">Social Media Submissions</div>
+          <br></br>
 
         <Router>
           <div>
@@ -159,6 +160,7 @@ class SubmissionContainer extends Component {
           />   
         </div>
       </Router>
+      <br></br><br></br>
 
       <div className="level4Text">Questions? Contact Social Keep at social@socialkeep.io.</div>
       </div>
