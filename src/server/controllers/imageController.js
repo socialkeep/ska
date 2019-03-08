@@ -1,14 +1,13 @@
 const S3 = require('../model/aws-config');
+const db = require('../model/database')
 const fs = require('fs');
-const imageController = {}
+const imageController = {};
 
 imageController.addPhoto = (req,res,next) => {
-  console.log("file??", req.file);
-  if (req.file === null) return next();
-
-
+  if (!req.file) return next();
+  db.query('SELECT * FROM content')
+  .then((data) => console.log(req.file))
   const tempFilePath = req.file.path;
-
   const params = {
     // which bucket in S3 to store file in
     Bucket: process.env.AWS_S3_BUCKET,
