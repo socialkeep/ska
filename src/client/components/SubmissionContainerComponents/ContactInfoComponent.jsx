@@ -25,7 +25,7 @@ const ContactInfoComponent = (props) => {
           <br></br>
           <br></br>
 
-          <Link to="/submission/socialmediadetails"><button onClick={console.log("lol help")} className="standardBlueButton">Continue</button></Link>
+          <Link to="/submission/socialmediadetails"><button className="standardBlueButton">Continue</button></Link>
           </div>
       </div>
     )

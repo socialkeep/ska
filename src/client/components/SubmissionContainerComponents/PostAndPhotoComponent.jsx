@@ -2,9 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PostAndPhotoComponent = (props) => {
-  console.log("------",props)
-  const { match } = props.props;
-
   return (
     <div className="socialMediaComponent">
         <h1>SocialKeep</h1>
