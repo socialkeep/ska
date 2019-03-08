@@ -1,5 +1,5 @@
 const db = require('../model/database')
-const adminController = {}
+const adminController = {};
 
 
 adminController.verify = (req, res, next) => {
