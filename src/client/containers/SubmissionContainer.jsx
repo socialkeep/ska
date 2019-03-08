@@ -107,7 +107,6 @@ class SubmissionContainer extends Component {
       <div className="card">
         <div className="submissionContainer">
           <div className="level2Text">Social Media Submissions</div>
-          <br></br>
 
         <Router>
           <div>

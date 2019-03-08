@@ -61,9 +61,7 @@ body {
 //   background-position: center;
 // }
 
-.submissionContainer {
 
-}
 
 .SubmissionComponents {
 
@@ -75,9 +73,11 @@ body {
 
 .navigationComponentItem {
   color: #8E8A8A;
-  font-size: 12;
+  font-size: 13;
   font-family: Arial;
   align-content: right;
+  padding-right: 15px;
+  padding-top: 15px;
 }
 
 
@@ -117,7 +117,7 @@ footer {
 
 .level2Text {
   font-family: Arial;
-  padding-top: 15px;
+  padding-top: 20px;
   font-size: 20px;
   text-align: center;
   color: $standard-font-black;
@@ -126,7 +126,7 @@ footer {
 
 .level3Text {
   font-family: Arial;
-  padding-top: 15px;
+  padding-top: 20px;
   font-size: 13px;
   text-align: center;
   color: $standard-font-black;
@@ -154,6 +154,23 @@ footer {
 //** --------- Input Fields ------------------
 
 input {
+  // font-family: Arial;
+  // font-size: 12px;
+  // color: $input-field-font-color;
+  // background-color: $bg-color;
+  // box-shadow: $input-fields-box-shadow;
+  // border-radius: $border-radius;
+  // border: transparent;
+  // height: 40px;
+  // width: 250px;
+  // padding-left: 10px;
+  // margin-right: auto;
+  // margin-bottom: 15px;
+  //margin-left: 15%;
+}
+
+.inputContactDetails {
+
   font-family: Arial;
   font-size: 12px;
   color: $input-field-font-color;
@@ -166,7 +183,9 @@ input {
   padding-left: 10px;
   margin-right: auto;
   margin-bottom: 15px;
-  //margin-left: 15%;
+
+
+
 }
 
 .formContent {
@@ -175,6 +194,36 @@ input {
   margin: auto;
 }
 
+.postInputField {
+  font-family: Arial;
+  font-size: 12px;
+  color: $input-field-font-color;
+  background-color: $bg-color;
+  box-shadow: $input-fields-box-shadow;
+  border-radius: $border-radius;
+  border: transparent;
+  padding-left: 10px;
+  margin-right: auto;
+  // margin-bottom: 15px;
+  height: 150px;
+  width: 315px;
+}
+
+.item-upload {
+  
+  // font-family: Arial;
+  // font-size: 15px;
+  // border-radius: $border-radius;
+  // padding: 10px 20px;
+  // margin-left: auto;
+  // box-shadow: 3px 3px 3px #8E8A8A;
+
+}
+.uploadContainer {
+  padding-top: 5px;
+  padding-bottom: 13px;
+
+}
 
 //** --------- Buttons ------------------
 

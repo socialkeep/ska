@@ -7,10 +7,12 @@ const SocialMediaComponent = (props) => {
     const { match } = props.props;
 
     return (
-       <div className="socialMediaComponent">
-          <h1>SocialKeep</h1>
-          <h2>Social Media Submissions</h2>
-          <h3>Please enter a social handle for the platforms you would like your post to be featured on.</h3>
+       <div className="SubmissionComponents">
+
+        <div className="level3Text">Please enter a social handle for the platforms<br></br> you would like your post to be featured on.</div>
+        <br></br>
+
+        <div className="formContent">
 
           <input className="inputContactDetails" id="instagram" placeholder='Instagram' onChange={props.handleChange} value={props.instagram} type="text"/>
           <br></br>
@@ -22,6 +24,9 @@ const SocialMediaComponent = (props) => {
           <br></br>
         
           <Link to={`/submission/postandphotodetails`}><button className="standardBlueButton">Continue</button></Link>
+
+        </div>
+
       </div>
 
     )

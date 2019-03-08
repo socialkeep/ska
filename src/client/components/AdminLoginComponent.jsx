@@ -5,9 +5,14 @@ const AdminInfoComponent = (props) => {
 
     return (
       <div className="AdminLoginComponent">
-        <h1>SocialKeep</h1>
-        <h2>Administrator Login</h2>
-        <h3>Please enter your login details.</h3>
+
+        <div className="level2Text">Administrator Login</div>
+        <br></br>
+        <div className="level3Text">Please enter your login details.</div> 
+        <br></br>
+
+        <div className="formContent">
+
 
         <input className="inputContactDetails" id="emailAddress" placeholder='Email Address' onChange={props.handleChange} value={props.email} type="text"/>
         <br></br>
@@ -16,6 +21,13 @@ const AdminInfoComponent = (props) => {
         <br></br>
 
         <button className="standardBlueButton">Submit</button>
+
+        </div>
+        <br></br><br></br>
+
+      <div className="level4Text">Questions? Contact Social Keep at social@socialkeep.io.</div>
+
+
       </div>    
 
     )

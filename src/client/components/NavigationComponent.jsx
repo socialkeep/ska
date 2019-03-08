@@ -11,9 +11,9 @@ const NavigationComponent = (props) => {
        {/* <img src={logo} /> */}
         
 
-         <Link className="navigationComponentItem" to="/submission">Submission Container</Link> 
-         <Link className="navigationComponentItem" to="/adminlogin">Admin Login</Link>     
-         <Link className="navigationComponentItem" to="/review">Review container</Link>     
+         {/* <Link className="navigationComponentItem" to="/submission">Submission Container</Link>  */}
+         {/* <Link className="navigationComponentItem" to="/adminlogin">Admin Login</Link>      */}
+         {/* <Link className="navigationComponentItem" to="/review">Review container</Link>      */}
 
         {(props.isLoggedIn === false) && (
           <div className="navigationComponentItem">

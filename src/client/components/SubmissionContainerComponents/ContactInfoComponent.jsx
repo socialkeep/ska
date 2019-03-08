@@ -6,7 +6,7 @@ const ContactInfoComponent = (props) => {
   console.log("contact info component props", props)
 
     return (
-      <div className="SubmissionComponents" className="PostAndPhotoComponent">
+      <div className="SubmissionComponents">
 
           <div className="level3Text">Please enter your contact details, <br></br> so we can share your social media post!</div>
           <br></br>
