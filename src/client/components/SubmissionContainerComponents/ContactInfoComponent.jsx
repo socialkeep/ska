@@ -6,8 +6,8 @@ const ContactInfoComponent = (props) => {
   console.log("contact info component props", props)
 
     return (
-      <div className="SubmissionComponents" className="PostAndPhotoComponent">
-         <br></br>
+      <div className="SubmissionComponents">
+
           <div className="level3Text">Please enter your contact details, <br></br> so we can share your social media post!</div>
           <br></br>
 
@@ -15,14 +15,11 @@ const ContactInfoComponent = (props) => {
 
           <input className="inputContactDetails" id="firstName" placeholder='First Name' onChange={props.handleChange} type="text"/> 
           <br></br>
-          <br></br>
 
           <input className="inputContactDetails" id="lastName" placeholder='Last Name' onChange={props.handleChange} type="text"/>
           <br></br>
-          <br></br>
 
           <input className="inputContactDetails" id="email" placeholder='Email Address' onChange={props.handleChange} type="text"/>
-          <br></br>
           <br></br>
 
           <Link to="/submission/socialmediadetails"><button className="standardBlueButton">Continue</button></Link>

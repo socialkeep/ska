@@ -160,6 +160,7 @@ class SubmissionContainer extends Component {
           />   
         </div>
       </Router>
+      <br></br><br></br>
 
       <div className="level4Text">Questions? Contact Social Keep at social@socialkeep.io.</div>
       </div>
