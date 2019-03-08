@@ -1,7 +1,7 @@
 const S3 = require('../model/aws-config');
 const db = require('../model/database')
 const fs = require('fs');
-const imageController = {}
+const imageController = {};
 
 imageController.addPhoto = (req,res,next) => {
   if (!req.file) return next();
