@@ -22,6 +22,7 @@ app.post('/api/addPhoto', upload.single('file'), imageController.addPhoto, (req,
 
 // when 'submit' is clicked on post submission form, sends you to thank you page
 app.post('/createpost', upload.single('file'), imageController.addPhoto, contentController.add, (req, res) => {
+  console.log("blah pls")
   res.send('Thank you for submitting a post!');
 });
 

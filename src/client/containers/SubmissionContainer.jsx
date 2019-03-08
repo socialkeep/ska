@@ -85,7 +85,7 @@ class SubmissionContainer extends Component {
 
     console.log("SUBMIT DATA data ", postData)
 
-    fetch('/postContent', {
+    fetch('http://localhost:3000/createpost', {
       method: 'POST',
       body: postData
     })
